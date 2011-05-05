@@ -36,8 +36,7 @@ This application is designed for sign-in with a *single provider*. For example, 
 
 h4. When to use Devise?
 
-"Devise":http://github.com/plataformatec/devise provides authentication using username (or email address) and password. If you don't need the option of using a username/password, that is, if you wish to have all your users sign in using a service provider's account (such as Twitter or Facebook), there's no need to use Devise. Devise can be used in conjunction with the OmniAuth gem when you need to offer users the option of signing up for access to a website using an email address. For example, combine Devise with OmniAuth to a
-ccommodate users who want to log in with various service providers (Twitter, Facebook, etc.) as well as users who don't have external accounts and want to sign up with just an email address. See suggestions below for tutorials and examples that combine Devise with OmniAuth.
+"Devise":http://github.com/plataformatec/devise provides authentication using username (or email address) and password. If you don't need the option of using a username/password, that is, if you wish to have all your users sign in using a service provider's account (such as Twitter or Facebook), there's no need to use Devise. Devise can be used in conjunction with the OmniAuth gem when you need to offer users the option of signing up for access to a website using an email address. For example, combine Devise with OmniAuth to accommodate users who want to log in with various service providers (Twitter, Facebook, etc.) as well as users who don't have external accounts and want to sign up with just an email address. See suggestions below for tutorials and examples that combine Devise with OmniAuth.
 
 h4. The Email Problem
 
@@ -213,7 +212,7 @@ config/initializers/omniauth.rb
 
 You'll need to keep a local copy of the file and recreate it if you replace your local repo with a clone from a remote Git repository.
 
-h2. Using the Database Seed File to Reset the Datastore
+h4. Using the Database Seed File to Reset the Datastore
 
 You'll want a convenient way to reset the datastore. The file *db/seeds.rb* is set up to reset the MongoDB database.
 
