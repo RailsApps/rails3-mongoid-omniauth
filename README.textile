@@ -117,7 +117,7 @@ You can use an application template to generate a new version of the example app
 
 Use the command:
 
-@$ rails new APP_NAME -m https://github.com/fortuity/rails3-application-templates/raw/master/rails3-mongoid-omniauth-template.rb -T -J@
+@$ rails new APP_NAME -m https://github.com/fortuity/rails3-application-templates/raw/master/rails3-mongoid-omniauth-template.rb -T -O -J@
 
 Use the @-T -O -J@ flags to skip Test::Unit files, Active Record files, and Prototype files.
 
