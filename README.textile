@@ -2,29 +2,28 @@ h1. Rails 3 + Mongoid + Omniauth
 
 This is an example *Rails 3 application* that combines *OmniAuth* with *Mongoid*. It uses the "OmniAuth":https://github.com/intridea/omniauth gem to manage authentication using a service provider such as Twitter or Facebook. MongoDB is used as a datastore with the "Mongoid":http://mongoid.org/ gem for quick development without schemas or migrations. 
 
-Best of all, there's a "detailed tutorial":https://github.com/fortuity/rails3-mongoid-omniauth/wiki/Tutorial (walk-through) to show how it's built.
+Best of all, there's a "detailed tutorial":https://github.com/RailsApps/rails3-mongoid-omniauth/wiki/Tutorial (walk-through) to show how it's built.
 
 * *Service Providers:* Facebook, Twitter, GitHub, LinkedIn, and "many more":https://github.com/intridea/omniauth.
 * *Gems:* Mongoid and OmniAuth plus optional jQuery, Haml, RSpec and Cucumber.
 
 You can clone this app or generate a new Rails application using this app as a template.
 
-Any issues? Please create an "Issue":http://github.com/fortuity/rails3-mongoid-omniauth/issues on GitHub.
+Any issues? Please create a "GitHub issue":http://github.com/RailsApps/rails3-mongoid-omniauth/issues.
 
-h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
+h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter !http://railsapps.github.com/images/mailing-list-icon.jpg(Join the Mailing List)!:http://eepurl.com/dQx3o Join the Mailing List
 
-To keep up to date, follow the project on Twitter:
-"http://twitter.com/rails_apps":http://twitter.com/rails_apps
+Follow the project on Twitter: "http://twitter.com/rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
-Please tweet some praise if you like what you've found.
+<a href="http://eepurl.com/dQx3o">Join the email list</a> (low volume, announcements only) for project updates and my tips about Rails resources.
 
-h2. "Building It" Tutorial
+h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
 
 A complete walkthrough tutorial is available on the GitHub wiki:
 
-h4. "View the Tutorial":https://github.com/fortuity/rails3-mongoid-omniauth/wiki/Tutorial
+h4. "View the Tutorial":https://github.com/RailsApps/rails3-mongoid-omniauth/wiki/Tutorial
 
-The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere.
+The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of "Rails books and references":http://railsapps.github.com/rails-books.html for recommended reading.
 
 If you simply wish to modify the application for your own project, you can download the application and set it up as described below, without following the tutorial.
 
@@ -52,9 +51,11 @@ h4. Similar Examples and Tutorials
 | Ryan Bates | "Simple OmniAuth":http://railscasts.com/episodes/241-simple-omniauth | screencast |
 | Markus Proske | "OmniAuth Pure":http://www.communityguides.eu/articles/16 | example and tutorial for OmniAuth with multiple providers |
 | Markus Proske | "Devise and OmniAuth":http://www.communityguides.eu/articles/11 | example and tutorial for OmniAuth and Devise with multiple providers |
-| Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/fortuity/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
+| Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/railsapps/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
 | Daniel Kehoe | "Devise, Mongoid":https://github.com/fortuity/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
 | Fernando Tapia Rico | "Devise, OmniAuth, Mongoid":https://github.com/fertapric/rails3-mongoid-devise-omniauth | With tutorial, using MongoDB |
+
+See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Obtaining API Keys
 
@@ -107,19 +108,19 @@ h4. Downloading the Code
 
 If you simply wish to examine the example code, you can download the code ("clone the repository") with the command
 
-@$ git clone git://github.com/fortuity/rails3-mongoid-omniauth.git@
+@$ git clone git://github.com/RailsApps/rails3-mongoid-omniauth.git@
 
 The source code is managed with Git (a version control system). You'll need Git on your machine (install it from "http://git-scm.com/":http://git-scm.com/).
 
 h4. Using the Ready-Made Application Template
 
-You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "fortuity/rails3-application-templates":https://github.com/fortuity/rails3-application-templates repository.
+You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "RailsApps/rails3-application-templates":https://github.com/RailsApps/rails3-application-templates repository.
 
-Use the command:
+To build the "rails3-mongoid-omniauth" example application, run the command:
 
-@$ rails new APP_NAME -m https://github.com/fortuity/rails3-application-templates/raw/master/rails3-mongoid-omniauth-template.rb -T -O -J@
+@$ rails new APP_NAME -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-mongoid-omniauth-template.rb -T -O@
 
-Use the @-T -O -J@ flags to skip Test::Unit files, Active Record files, and Prototype files.
+Use the @-T -O@ flags to skip Test::Unit files and Active Record files. Add the @-J@ flag to skip Prototype files for Rails 3.0 (not needed for Rails 3.1).
 
 bq. You MUST be using Rails 3.0.4 or newer. Generating a Rails application from an “HTTPS” URL does not work in Rails 3.0.3 and earlier versions.
 
@@ -127,20 +128,19 @@ This creates a new Rails app (with the @APP_NAME@ you provide) on your computer.
 
 The application generator template will ask you for your preferences:
 
-* Would you like to use jQuery instead of Prototype?
-* Would you like to use jQuery UI?
+* Would you like to use jQuery instead of Prototype? (for Rails 3.0)
+* Would you like to use jQuery UI? (for Rails 3.0 or 3.1)
 * Would you like to use Haml instead of ERB?
 * Would you like to use RSpec instead of TestUnit?
 * Would you like to use factory_girl for test fixtures with RSpec?
 * Would you like to use Cucumber for your BDD?
 * Would you like to use Mongoid to connect to a MongoDB database?
-* Would you like to use OmniAuth for authentication?
-* Which service provider will you use? (Twitter, Facebook, etc.)
+* Would you like to use OmniAuth for authentication? 
 * Would you like to set a robots.txt file to ban spiders?
 
 h4. Use "Recipes" to Customize an Application Template
 
-The "tutorial":https://github.com/fortuity/rails3-mongoid-omniauth/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "rails3_devise_wizard":https://github.com/fortuity/rails3_devise_wizard gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
+The "tutorial":https://github.com/RailsApps/rails3-mongoid-omniauth/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/railsapps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
 
 h4. Please Remember: Edit the README
 
@@ -162,7 +162,7 @@ The application uses the following gems. I recommend checking for newer versions
 * cucumber-rails "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/cucumber-rails
 * capybara "(Check rubygems.org for a newer gem)":http://rubygems.org/gems/capybara
 
-The app has been tested with the indicated versions. If you are able to build the app with a newer gem, please create an "issue":http://github.com/fortuity/rails3-mongoid-omniauth/issues on GitHub and I will update the app.
+The app has been tested with the indicated versions. If you are able to build the app with a newer gem, please create a "GitHub issue":http://github.com/RailsApps/rails3-mongoid-omniauth/issues. and I will update the app.
 
 h4. Install the Required Gems
 
@@ -237,101 +237,7 @@ To see your application in action, open a browser window and navigate to "http:/
 
 h2. Deploy to Heroku
 
-h4. Set Up Heroku
-
-For your convenience, here are instructions for deploying your app to Heroku. Heroku provides low cost, easily configured Rails application hosting.
-
-To deploy this app to Heroku, you must have a Heroku account. If you need to obtain one, visit "http://heroku.com/":http://heroku.com/ to set up an account. 
-
-Make sure the Heroku gem is in your *Gemfile* "(check rubygems.org for the latest heroku gem)":http://rubygems.org/gems/heroku:
-
-@gem "heroku", ">= 1.19.1"@
-
-If it's not, add it and run
-
-@$ bundle install@
-
-to set up your gems again.
-
-Add your public key immediately after installing the heroku gem so that you can use git to push or clone Heroku app repositories. See "http://devcenter.heroku.com/articles/heroku-command":http://devcenter.heroku.com/articles/heroku-command for details.
-
-h4. Create Your Application on Heroku
-
-Use the Heroku create command to create and name your new app.
-
-@$ heroku create _myapp_@
-
-As of 9 February 2011, bamboo-ree-1.8.7 is the default stack for new Heroku apps.
-
-If you want to use Ruby 1.9.2, you can create your app with:
-
-@heroku create _myapp_ --stack bamboo-mri-1.9.2@
-
-h4. Heroku Add-on for MongoHQ
-
-You can use a Heroku add-on to deploy your app using the MongoHQ service. See "details about the service":http://addons.heroku.com/mongohq and "details about installation":http://devcenter.heroku.com/articles/mongohq.
-
-To enable the add-on, you can use the Heroku web interface or you can enter the following commands:
-
-@$ heroku addons:add mongohq:free@
-
-h4. Check Heroku Configuration
-
-You can check that everything has been added correctly by running:
-
-@$ heroku info --app myapp@
-
-If you see @Stack: bamboo-ree-1.8.7@ and you want to use Ruby 1.9.2, you can migrate:
-
-@heroku stack:migrate bamboo-mri-1.9.2@
-
-h4. Push Your Application to Heroku
-
-Push your application to Heroku:
-
-@$ git push heroku master@
-
-Initialize your application database:
-
-@$ heroku rake db:seed@
-
-h4. Fix Problems Connecting to MongoHQ
-
-If you get the error message "failed to connect to any given host:port" or "Failed to connect to a master node at localhost:27017", the *config/mongoid.yml* file may not have the correct MongoHQ connection parameters.
-
-If the file *config/mongoid.yml* contains this:
-
-<pre>
-# set these environment variables on your prod server
-production:
-  host: <%= ENV['MONGOID_HOST'] %>
-  port: <%= ENV['MONGOID_PORT'] %>
-  username: <%= ENV['MONGOID_USERNAME'] %>
-  password: <%= ENV['MONGOID_PASSWORD'] %>
-  database: <%= ENV['MONGOID_DATABASE'] %>
-</pre>
-
-modify it to look like this:
-
-<pre>
-# set these environment variables on your prod server
-production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
-</pre>
-
-Then push your application to Heroku again with @$ git push heroku master@ and run @$ heroku rake db:seed@ again.
-
-h4. Visit Your Site
-
-Open your Heroku site in your default web browser:
-
-@$ heroku open@
-
-h4. Troubleshooting
-
-If you get errors, you can troubleshoot by reviewing the log files:
-
-@$ heroku logs@
+For your convenience, here are "instructions for deploying your app to Heroku":http://railsapps.github.com/rails-heroku-tutorial.html. Heroku provides low cost, easily configured Rails application hosting.
 
 h2. Testing
 
@@ -345,7 +251,7 @@ Run @rake spec@ to run all RSpec tests.
 
 Run @rake cucumber@ (or more simply, @cucumber@) to run all Cucumber scenarios and steps.
 
-You can browse and search the Cucumber features at the "Relish":http://relishapp.com/fortuity/rails3-mongoid-omniauth website.
+You can browse and search the Cucumber features at the "Relish":http://relishapp.com/RailsApps/rails3-mongoid-omniauth website.
 
 h2. Documentation and Support
 
@@ -355,13 +261,13 @@ Ryan Bates offers a "Railscast on Simple OmniAuth":http://railscasts.com/episode
 
 h4. Issues
 
-Please create an "Issue":http://github.com/fortuity/rails3-mongoid-omniauth/issues on GitHub if you identify any problems or have suggestions for improvements.
+Please create a "GitHub issue":http://github.com/RailsApps/rails3-mongoid-omniauth/issues. if you identify any problems or have suggestions for improvements.
 
 h2. Contributing
 
 If you make improvements to this application, please share with others.
 
-Send the author a message, create an "issue":http://github.com/fortuity/rails3-mongoid-omniauth/issues, or fork the project and submit a pull request.
+Send the author a message, create an "issue":http://github.com/RailsApps/rails3-mongoid-omniauth/issues, or fork the project and submit a pull request.
 
 If you add functionality to this application, create an alternative implementation, or build an application that is similar, please contact me and I'll add a note to the README so that others can find your work.
 
