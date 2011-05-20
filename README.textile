@@ -52,7 +52,7 @@ h4. Similar Examples and Tutorials
 | Markus Proske | "OmniAuth Pure":http://www.communityguides.eu/articles/16 | example and tutorial for OmniAuth with multiple providers |
 | Markus Proske | "Devise and OmniAuth":http://www.communityguides.eu/articles/11 | example and tutorial for OmniAuth and Devise with multiple providers |
 | Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/railsapps/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
-| Daniel Kehoe | "Devise, Mongoid":https://github.com/fortuity/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
+| Daniel Kehoe | "Devise, Mongoid":https://github.com/railsapps/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
 | Fernando Tapia Rico | "Devise, OmniAuth, Mongoid":https://github.com/fertapric/rails3-mongoid-devise-omniauth | With tutorial, using MongoDB |
 
 See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
@@ -251,8 +251,6 @@ Run @rake spec@ to run all RSpec tests.
 
 Run @rake cucumber@ (or more simply, @cucumber@) to run all Cucumber scenarios and steps.
 
-You can browse and search the Cucumber features at the "Relish":http://relishapp.com/RailsApps/rails3-mongoid-omniauth website.
-
 h2. Documentation and Support
 
 This is the only documentation.
@@ -261,7 +259,7 @@ Ryan Bates offers a "Railscast on Simple OmniAuth":http://railscasts.com/episode
 
 h4. Issues
 
-Please create a "GitHub issue":http://github.com/RailsApps/rails3-mongoid-omniauth/issues. if you identify any problems or have suggestions for improvements.
+Please create a "issue on GitHub":http://github.com/RailsApps/rails3-mongoid-omniauth/issues if you identify any problems or have suggestions for improvements.
 
 h2. Contributing
 
