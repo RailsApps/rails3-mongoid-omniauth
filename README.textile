@@ -81,8 +81,10 @@ h2. Dependencies
 Before running this app, you need to install 
 
 * The Ruby language (version 1.9.2)
-* Rails
+* Rails 3.1
 * A working installation of "MongoDB":http://www.mongodb.org/ (version 1.6.0 or newer)
+
+This repository also contains branches for earlier version of Rails.
 
 See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
