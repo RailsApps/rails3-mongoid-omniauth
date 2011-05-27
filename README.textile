@@ -148,7 +148,7 @@ h2. Getting Started
 
 h4. About Required Gems
 
-The application uses the following gems. I recommend checking for newer versions of these gems before proceeding:
+The application uses the following gems:
 
 * rails
 * mongoid
