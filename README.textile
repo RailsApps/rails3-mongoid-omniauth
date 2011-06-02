@@ -13,7 +13,7 @@ Any issues? Please create a "GitHub issue":http://github.com/RailsApps/rails3-mo
 
 h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter !http://railsapps.github.com/images/mailing-list-icon.jpg(Join the Mailing List)!:http://eepurl.com/dQx3o Join the Mailing List
 
-Follow the project on Twitter: "rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
+Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
 <a href="http://eepurl.com/dQx3o">Join the email list</a> (low volume, announcements only) for project updates and my tips about Rails resources.
 
@@ -51,8 +51,8 @@ h4. Similar Examples and Tutorials
 | Ryan Bates | "Simple OmniAuth":http://railscasts.com/episodes/241-simple-omniauth | screencast |
 | Markus Proske | "OmniAuth Pure":http://www.communityguides.eu/articles/16 | example and tutorial for OmniAuth with multiple providers |
 | Markus Proske | "Devise and OmniAuth":http://www.communityguides.eu/articles/11 | example and tutorial for OmniAuth and Devise with multiple providers |
-| Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/railsapps/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
-| Daniel Kehoe | "Devise, Mongoid":https://github.com/railsapps/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
+| Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/RailsApps/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
+| Daniel Kehoe | "Devise, Mongoid":https://github.com/RailsApps/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
 | Fernando Tapia Rico | "Devise, OmniAuth, Mongoid":https://github.com/fertapric/rails3-mongoid-devise-omniauth | With tutorial, using MongoDB |
 
 See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
@@ -78,15 +78,19 @@ Visit "https://github.com/account/applications/new":https://github.com/account/a
 
 h2. Dependencies
 
-Before running this app, you need to install 
+Before running this app, you will need:
 
 * The Ruby language (version 1.9.2)
+** @$ ruby -v@
 * Rails 3.1
+** @$ rails -v@
+* Rake 0.9.1
+** @$ rake --version@
 * A working installation of "MongoDB":http://www.mongodb.org/ (version 1.6.0 or newer)
 
-This repository also contains branches for earlier version of Rails.
+You must update the standard Ruby installation from Rake 0.8.7 to Rake 0.9.1 before using the application templates to generate a new Rails app.
 
-See "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
+See "Installing Rails 3.1":http://railsapps.github.com/installing-rails-3-1.html and "Managing Rails Versions and Gems":http://railsapps.github.com/managing-rails-versions-gems.html for detailed instructions and advice.
 
 h4. Installing MongoDB
 
@@ -112,9 +116,9 @@ The source code is managed with Git (a version control system). You'll need Git 
 
 h4. Using the Ready-Made Application Template
 
-You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "RailsApps/rails3-application-templates":https://github.com/RailsApps/rails3-application-templates repository.
+You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "Rails Application Templates":https://github.com/RailsApps/rails3-application-templates repository.
 
-To build the "rails3-mongoid-omniauth" example application, run the command:
+Use the command:
 
 @$ rails new APP_NAME -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-mongoid-omniauth-template.rb -T -O@
 
@@ -138,7 +142,7 @@ The application generator template will ask you for your preferences:
 
 h4. Use "Recipes" to Customize an Application Template
 
-The "tutorial":https://github.com/RailsApps/rails3-mongoid-omniauth/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/railsapps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
+The "tutorial":https://github.com/RailsApps/rails3-mongoid-omniauth/wiki/Tutorial shows how a customized application template can be assembled from "recipes." The application template was created using the "Rails Apps Composer":https://github.com/RailsApps/rails_apps_composer gem which provides a convenient way to assemble a reusable application template by selecting various "recipes" for popular Rails development packages.
 
 h4. Please Remember: Edit the README
 
@@ -150,15 +154,15 @@ h4. About Required Gems
 
 The application uses the following gems:
 
-* rails
-* mongoid
-* bson_ext
-* omniauth
-* rspec-rails
-* database_cleaner
-* factory_girl_rails
-* cucumber-rails
-* capybara
+* "rails":http://rubygems.org/gems/rails
+* "rspec-rails":http://rubygems.org/gems/rspec-rails
+* "database_cleaner":http://rubygems.org/gems/database_cleaner
+* "factory_girl_rails":http://rubygems.org/gems/factory_girl_rails
+* "cucumber-rails":http://rubygems.org/gems/cucumber-rails
+* "capybara":http://rubygems.org/gems/capybara
+* "mongoid":http://rubygems.org/gems/mongoid
+* "bson_ext":http://rubygems.org/gems/bson_ext
+* "omniauth":http://rubygems.org/gems/omniauth
 
 See an example "Rails 3.1 Gemfile":http://railsapps.github.com/rails-3-1-example-gemfile.html.
 
@@ -274,7 +278,7 @@ h2. Credits
 Daniel Kehoe ("http://danielkehoe.com/":http://danielkehoe.com/) implemented the application and wrote the tutorial.
 
 Is the app useful to you? Follow the project on Twitter:
-"rails_apps":http://twitter.com/rails_apps
+"@rails_apps":http://twitter.com/rails_apps
 and tweet some praise. I'd love to know you were helped out by what I've put together.
 
 h2. License
