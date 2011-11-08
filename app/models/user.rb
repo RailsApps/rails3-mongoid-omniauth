@@ -10,9 +10,9 @@ class User
     create! do |user|
       user.provider = auth['provider']
       user.uid = auth['uid']
-      if auth['user_info']
-        user.name = auth['user_info']['name'] if auth['user_info']['name'] # Twitter, Google, Yahoo, GitHub
-        user.email = auth['user_info']['email'] if auth['user_info']['email'] # Google, Yahoo, GitHub
+      if auth['info']
+        user.name = auth['info']['name'] if auth['info']['name'] # Twitter, Google, Yahoo, GitHub
+        user.email = auth['info']['email'] if auth['info']['email'] # Google, Yahoo, GitHub
       end
       if auth['extra'] && auth['extra']['user_hash']
         user.name = auth['extra']['user_hash']['name'] if auth['extra']['user_hash']['name'] # Facebook
@@ -22,4 +22,3 @@ class User
   end
 
 end
-
