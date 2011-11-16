@@ -18,3 +18,4 @@ class User
   end
 
 end
+
