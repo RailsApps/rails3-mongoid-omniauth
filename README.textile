@@ -1,6 +1,8 @@
-h1. Rails 3.2 Mongoid Omniauth
+h1. Rails Application for Omniauth with Mongoid
 
-This is an example application for Rails 3.2 that combines OmniAuth with Mongoid. It uses the "OmniAuth":https://github.com/intridea/omniauth gem to manage authentication using a service provider such as Twitter or Facebook. MongoDB is used as a datastore with the "Mongoid":http://mongoid.org/ gem for quick development without schemas or migrations. 
+Rails 3.2 example application shows how to use Omniauth with Mongoid.
+
+It uses the "OmniAuth":https://github.com/intridea/omniauth gem to manage authentication using a service provider such as Twitter or Facebook. MongoDB is used as a datastore with the "Mongoid":http://mongoid.org/ gem for quick development without schemas or migrations. 
 
 Best of all, there's a "detailed tutorial":http://railsapps.github.com/tutorial-rails-mongoid-omniauth.html to show how it's built.
 
