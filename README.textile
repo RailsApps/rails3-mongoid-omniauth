@@ -1,23 +1,22 @@
-h1. Rails Application for Omniauth with Mongoid
+h1. !http://railsapps.github.com/images/rails-36x36.jpg(Rails Application for Omniauth with Mongoid)!  Rails App for Omniauth with Mongoid
 
 Rails 3.2 example application shows how to use Omniauth with Mongoid.
 
-It uses the "OmniAuth":https://github.com/intridea/omniauth gem to manage authentication using a service provider such as Twitter or Facebook. MongoDB is used as a datastore with the "Mongoid":http://mongoid.org/ gem for quick development without schemas or migrations. 
+* "OmniAuth":https://github.com/intridea/omniauth manages authentication using a service provider such as Twitter or Facebook.
+* MongoDB is used as a datastore with the "Mongoid":http://mongoid.org/  gem for quick development without schemas or migrations.
 
 Best of all, there's a "detailed tutorial":http://railsapps.github.com/tutorial-rails-mongoid-omniauth.html to show how it's built.
 
 * *Service Providers:* Facebook, Twitter, GitHub, LinkedIn, and "many more":https://github.com/intridea/omniauth.
 * *Gems:* Mongoid and OmniAuth plus optional jQuery, Haml, RSpec and Cucumber.
 
-You can clone this app or generate a new Rails application using this app as a template.
-
-Any issues? Please create a "GitHub issue":http://github.com/RailsApps/rails3-mongoid-omniauth/issues.
+You can clone this app or generate a new Rails application using an "application template":https://github.com/RailsApps/rails3-application-templates.
 
 h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
 
 Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
 
-h2. !http://railsapps.github.com/images/rails-36x36.jpg(Tutorial)! Tutorial
+h2. Tutorial
 
 A complete walkthrough tutorial is available on the GitHub wiki:
 
@@ -47,6 +46,8 @@ This example app shows how to request an email address from the user when he or 
 
 h4. Similar Examples and Tutorials
 
+This is one in a series of Rails example apps and tutorials from the "RailsApps Project":http://railsapps.github.com/. See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
+
 |_. Author |_. Example App |_. Comments |
 | Ryan Bates | "Simple OmniAuth":http://railscasts.com/episodes/241-simple-omniauth | screencast |
 | Markus Proske | "OmniAuth Pure":http://www.communityguides.eu/articles/16 | example and tutorial for OmniAuth with multiple providers |
@@ -54,8 +55,6 @@ h4. Similar Examples and Tutorials
 | Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/RailsApps/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
 | Daniel Kehoe | "Devise, Mongoid":https://github.com/RailsApps/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
 | Fernando Tapia Rico | "Devise, OmniAuth, Mongoid":https://github.com/fertapric/rails3-mongoid-devise-omniauth | With tutorial, using MongoDB |
-
-See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.com/rails-examples-tutorials.html.
 
 h2. Obtaining API Keys
 
@@ -100,7 +99,15 @@ h2. Getting the Application
 
 You have several options for getting the code.
 
-h4. Downloading the Code
+h4. Fork, Clone, or Generate?
+
+_Fork:_ If you'd like to add features (or bug fixes) to improve the example application, you can fork the GitHub repo and "make pull requests":http://help.github.com/send-pull-requests/. Your code contributions are welcome!
+
+_Clone:_ If you want to copy and customize the app with changes that are only useful for your own project, you can clone the GitHub repo. You'll need to search-and-replace the project name throughout the application. You probably should generate the app instead (see below).
+
+_Generate:_ If you want to use the project as a starter app for your customized application, use the application template to generate a new version of the example app. You'll be able to give it your own project name when you generate the app. Generating the application (described below) gives you many options.
+
+h4. Clone the Repository
 
 If you simply wish to examine the example code, you can download the code ("clone the repository") with the command
 
@@ -114,7 +121,7 @@ h4. Using the Ready-Made Application Template
 
 You can use an application template to generate a new version of the example app. You’ll find an application template for this app in the "Rails Application Templates":https://github.com/RailsApps/rails3-application-templates repository.
 
-Use the command:
+To build the "rails3-mongoid-omniauth" example application, run the command:
 
 <pre>
 $ rails new myapp -m https://github.com/RailsApps/rails3-application-templates/raw/master/rails3-mongoid-omniauth-template.rb -T -O
@@ -122,25 +129,41 @@ $ rails new myapp -m https://github.com/RailsApps/rails3-application-templates/r
 
 Use the @-T -O@ flags to skip Test::Unit files and Active Record files.
 
+The @$@ character indicates a shell prompt; don't include it when you run the command.
+
 This creates a new Rails app (with the name @myapp@) on your computer.
 
-The application generator template will ask you for your preferences:
+The application generator templates will ask you for various preferences.
 
-* Would you like to use Haml instead of ERB?
-* Would you like to use RSpec instead of TestUnit?
-* Would you like to use factory_girl for test fixtures with RSpec?
-* Would you like to use Cucumber for your BDD?
-* Would you like to use Guard to automate your workflow?
-* Would you like to use Mongoid to connect to a MongoDB database?
-* Would you like to use OmniAuth for authentication?
-* Would you like to set a robots.txt file to ban spiders?
-* Would you like to use 'rails-footnotes' during development?
-* Which front-end framework would you like for HTML5 and CSS3?
+To reproduce the example application exactly as found in the repository, make the following selections:
+
+* Would you like to use "Haml":http://en.wikipedia.org/wiki/Haml instead of ERB? *no*
+* Would you like to use "RSpec":http://rspec.info/ instead of TestUnit? *yes*
+* Would you like to use "factory_girl":https://github.com/thoughtbot/factory_girl for test fixtures with RSpec? *yes*
+* Would you like to use "machinist":https://github.com/notahat/machinist for test fixtures with RSpec? *no*
+* Would you like to use "Cucumber":http://cukes.info/ for your BDD? *yes*
+* Would you like to use "Guard":http://intridea.com/posts/hire-a-guard-for-your-project to automate your workflow? *no*
+* Would you like to use Mongoid to connect to a MongoDB database? *yes* 
+* Would you like to use OmniAuth for authentication? *yes*
+* Which service provider will you use? *1 (Twitter)*
+* Would you like the app to use a Gmail account to send email? *yes*
+* Which front-end framework would you like for HTML5 and CSS3? *#1*
 ## None
-## Zurb Foundation
-## Twitter Bootstrap
-## Skeleton
+## "Zurb Foundation":http://foundation.zurb.com/
+## "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (less)
+## "Twitter Bootstrap":http://twitter.github.com/bootstrap/ (sass)
+## "Skeleton":http://www.getskeleton.com/
 ## Normalize CSS for consistent styling
+* Which form gem would you like? *#1*
+## None
+## simple form
+## simple form (bootstrap)
+* Would you like to use "rails-footnotes":https://github.com/josevalim/rails-footnotes during development? *no*
+* Would you like to set a robots.txt file to ban spiders? *yes*
+* Would you like to add 'will_paginate' for pagination? *no*
+* Add 'therubyracer' JavaScript runtime (for Linux users without node.js)? *no*
+
+You can choose other selections if you don’t care about matching the example application exactly.
 
 h4. Use "Recipes" to Customize an Application Template
 
@@ -229,7 +252,13 @@ When you wish to reset the MongoDB datastore you can run the command:
 
 You can also use the *db/seeds.rb* file to initialize the datastore by creating and saving any model instances you need.
 
-h4. Test the App
+Set the database for running tests:
+
+<pre>
+$ bundle exec rake db:test:prepare
+</pre>
+
+h2. Test the App
 
 You can check that your app runs properly by entering the command
 
