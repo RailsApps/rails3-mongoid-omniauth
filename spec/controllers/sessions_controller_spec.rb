@@ -1,4 +1,3 @@
-
 require 'spec_helper'
 
 describe SessionsController do
@@ -36,5 +35,5 @@ describe SessionsController do
   		current_path.should == '/'
   	end
   end
-  
+
 end
