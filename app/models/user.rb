@@ -5,7 +5,7 @@ class User
   field :name, :type => String
   field :email, :type => String
   attr_accessible :provider, :uid, :name, :email
-
+  validates :name, :presence => true
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth['provider']
