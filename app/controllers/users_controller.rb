@@ -2,7 +2,11 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!
   before_filter :correct_user?
 
-  def edit
+  def index
+    @users = User.all
+  end
+
+    def edit
     @user = User.find(params[:id])
   end
   
