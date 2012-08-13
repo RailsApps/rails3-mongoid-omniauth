@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'email_spec'
 require 'rspec/autorun'
 require 'factory_girl'
 
@@ -11,8 +10,6 @@ require 'factory_girl'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-  config.include(EmailSpec::Helpers)
-  config.include(EmailSpec::Matchers)
   config.include FactoryGirl::Syntax::Methods
   # ## Mock Framework
   #
