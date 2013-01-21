@@ -24,8 +24,6 @@ h4. "View the Tutorial":http://railsapps.github.com/tutorial-rails-mongoid-omnia
 
 The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of recommended resources for "Rails":http://railsapps.github.com/rails.html.
 
-If you simply wish to modify the application for your own project, you can download the application and set it up as described below, without following the tutorial.
-
 h2. What Is Implemented -- and What Is Not
 
 This is a demonstration application that allows you to visit a home page and see a list of users. You can log in using a service provider such as Twitter and view a profile for each user. You can customize this app as you need.
@@ -110,7 +108,7 @@ If you want to copy and customize the app with changes that are only useful for 
 <pre>
 $ git clone git://github.com/RailsApps/rails3-mongoid-omniauth.git
 </pre>
-  
+
 You'll need "git":http://git-scm.com/ on your machine. See "Rails and Git":http://railsapps.github.com/rails-git.html.
 
 h3. Generate
@@ -120,14 +118,86 @@ If you want to use the project as a starter app, use the "Rails Composer":http:/
 To build the example application, run the command:
 
 <pre>
-$ rails new myapp -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T -O
+$ rails new rails3-mongoid-omniauth -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T -O
 </pre>
 
 Use the @-T -O@ flags to skip Test::Unit files and Active Record files.
 
 The @$@ character indicates a shell prompt; don't include it when you run the command.
 
-This creates a new Rails app (with the name "myapp") on your computer.
+This creates a new Rails app named @rails3-mongoid-omniauth@ on your computer.
+
+You'll see a prompt:
+
+<pre>
+question  Install an example application?
+      1)  I want to build my own application
+      2)  membership/subscription/saas
+      3)  rails-prelaunch-signup
+      4)  rails3-bootstrap-devise-cancan
+      5)  rails3-devise-rspec-cucumber
+      6)  rails3-mongoid-devise
+      7)  rails3-mongoid-omniauth
+      8)  rails3-subdomains
+</pre>
+
+Choose *rails3-mongoid-omniauth*. The Rails Composer tool may give you other options (other choices may have been added since these notes were written).
+
+The application generator template will ask you for additional preferences:
+
+<pre>
+ question  Web server for development?
+       1)  WEBrick (default)
+       2)  Thin
+       3)  Unicorn
+       4)  Puma
+ question  Web server for production?
+       1)  Same as development
+       2)  Thin
+       3)  Unicorn
+       4)  Puma
+ question  Template engine?
+       1)  ERB
+       2)  Haml
+       3)  Slim
+   extras  Set a robots.txt file to ban spiders? (y/n)
+   extras  Create a project-specific rvm gemset and .rvmrc? (y/n)
+   extras  Create a GitHub repository? (y/n)
+</pre>
+
+h4. Web Servers
+
+Use the default WEBrick server for convenience. If you plan to deploy to Heroku, select "thin" as your production webserver.
+
+h4. Template Engine
+
+The example application uses the default "ERB" Rails template engine. Optionally, you can use another template engine, such as Haml or Slim. See instructions for "Haml and Rails":http://railsapps.github.com/rails-haml.html.
+
+h4. Other Choices
+
+Set a robots.txt file to ban spiders if you want to keep your new site out of Google search results.
+
+It is a good idea to use "rvm":https://rvm.io/, the Ruby Version Manager, and create a project-specific rvm gemset and .rvmrc file (not available on Windows). See "Installing Rails":http://railsapps.github.com/installing-rails.html.
+
+If you choose to create a GitHub repository, the generator will prompt you for a GitHub username and password.
+
+h4. Troubleshooting
+
+If you get an error "OpenSSL certificate verify failed" or "Gem::RemoteFetcher::FetchError: SSL_connect" see the article "OpenSSL errors and Rails":http://railsapps.github.com/openssl-certificate-verify-failed.html.
+
+If you get an error like this:
+
+<pre>
+Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+    composer  Running 'after bundler' callbacks.
+The template [...] could not be loaded.
+Error: You have already activated ..., but your Gemfile requires ....
+Using bundle exec may solve this.
+</pre>
+
+It's due to conflicting gem versions. See the article "Rails Error: “You have already activated (…)”":http://railsapps.github.com/rails-error-you-have-already-activated.html.
+
+Other problems? Check the "issues":https://github.com/RailsApps/rails3-mongoid-omniauth/issues.
 
 h3. Edit the README
 
@@ -165,11 +235,46 @@ You can use the default configuration found in the file *config/mongoid.yml*.
 
 If you want to see what's in your MongoDB databases, I recommend using the "MongoHub":http://mongohub.todayclose.com/ app (for Mac OS X).
 
+h3. Configure Email
+
+This example application doesn't send email messages. However, if you want your application to send email messages you must configure the application for your email account. See the article "Send Email with Rails":http://railsapps.github.com/rails-send-email.html.
+
+h3. Configuration File
+
+The application uses the "figaro gem":https://github.com/laserlemon/figaro to set environment variables. Credentials for your service provider account are set in the *config/application.yml* file. The *.gitignore* file prevents the *config/application.yml* file from being saved in the git repository so your credentials are kept private. See the article "Rails Environment Variables":http://railsapps.github.com/rails-environment-variables.html for more information.
+
+Modify the file *config/application.yml*:
+
+<pre>
+# Add account credentials and API keys here.
+# See http://railsapps.github.com/rails-environment-variables.html
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry sets a local environment variable and overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: Your_Gmail_Username
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+# Add application configuration variables here, as shown below.
+#
+ADMIN_NAME: First User
+ADMIN_EMAIL: user@example.com
+ADMIN_PASSWORD: changeme
+OMNIAUTH_PROVIDER_KEY: Your_OmniAuth_Provider_Key
+OMNIAUTH_PROVIDER_SECRET: Your_OmniAuth_Provider_Secret
+</pre>
+
+The @ADMIN_NAME@, @ADMIN_EMAIL@, and @ADMIN_PASSWORD@ settings are not used in this application.
+
+You'll obtain an API key and secret token for the service provider you'll use. For most service providers, you need to register your application and obtain API keys to use their authentication service.
+
+All configuration values in the *config/application.yml* file are available anywhere in the application as environment variables. For example, @ENV["OMNIAUTH_PROVIDER_KEY"]@ will return the string "Your_OmniAuth_Provider_Key".
+
+If you prefer, you can delete the *config/application.yml* file and set each value as an environment variable in the Unix shell.
+
 h3. Set Up Configuration for OmniAuth
 
 This app uses OmniAuth for user management and authentication. OmniAuth is at "https://github.com/intridea/omniauth":https://github.com/intridea/omniauth.
 
-You'll need an OmniAuth initialization file *config/initializers/omniauth.rb* set up for the service provider you'll use. For most service providers, you need to register your application and obtain API keys to use their authentication service.
+You'll need an OmniAuth initialization file *config/initializers/omniauth.rb* set up for the service provider you'll use. You'll set the API key and secret token in the *config/application.yml* file and initialize OmniAuth with the *config/initializers/omniauth.rb* file.
 
 For Twitter:
 
@@ -189,20 +294,13 @@ end
 
 For others, see "Module: OmniAuth::Strategies":http://intridea.github.com/omniauth/OmniAuth/Strategies.html.
 
-You can replace @ENV["OMNIAUTH_PROVIDER_KEY"]@ and @ENV["OMNIAUTH_PROVIDER_SECRET"]@ with your key and secret. However, committing the file to a public GitHub repository will expose your access codes.
+You can replace @ENV["OMNIAUTH_PROVIDER_KEY"]@ and @ENV["OMNIAUTH_PROVIDER_SECRET"]@ with your API key and secret token. However, committing the file to a public GitHub repository will expose your access codes. Instead, we advise to set the provider API key and secret token in the *config/application.yml* file. Recording sensitive information in the *config/initializers/omniauth.rb* file might expose it publicly on a GitHub repo. See the article "Rails Environment Variables":http://railsapps.github.com/rails-environment-variables.html for more information.
 
-If you're familiar with setting "Unix environment variables":http://en.wikipedia.org/wiki/Environment_variable, it's advisable to leave the settings unchanged and set your environment variables in the file that is read when starting an interactive shell (the *~/.bashrc* file for the bash shell). This will keep the password out of your repository.
+h3. Set Up a Database Seed File
 
-Are you using a bash shell? Use @echo $SHELL@ to find out. For a bash shell, edit the *~/.bashrc* file and add:
+The *db/seeds.rb* file initializes the database with default values. This application doesn't need to initialize the datastore. If you customize the application and wish to initialize the datastore, you can use the  *db/seeds.rb* file.
 
-<pre>
-export ENV['OMNIAUTH_PROVIDER_KEY']="your_key"
-export ENV['OMNIAUTH_PROVIDER_SECRET']="your_secret"
-</pre>
-
-Open a new shell or restart your terminal application to continue.
-
-h4. MongoDB Datastore
+h3. MongoDB Datastore
 
 When you wish to reset the MongoDB datastore you can run the command:
 
@@ -246,7 +344,7 @@ Please send the author a message, create an issue, or submit a pull request if y
 
 h2. Troubleshooting
 
-Problems? Check the "issues":https://github.com/RailsApps/rails3-application-templates/issues.
+Problems? Check the "issues":https://github.com/RailsApps/rails3-mongoid-omniauth/issues.
 
 h4. Problems with  "Certificate Verify Failed"
 
