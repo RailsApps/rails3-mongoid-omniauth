@@ -300,13 +300,16 @@ h3. Set Up a Database Seed File
 
 The *db/seeds.rb* file initializes the database with default values. This application doesn't need to initialize the datastore. If you customize the application and wish to initialize the datastore, you can use the  *db/seeds.rb* file.
 
-h3. MongoDB Datastore
+h3. Set the Database
 
-When you wish to reset the MongoDB datastore you can run the command:
+If you add anything to the *db/seeds.rb* file, you can initialize the datastore by running the commands:
 
-@$ rake db:reseed@
+<pre>
 
-Use the *db/seeds.rb* file to initialize the datastore by creating and saving any model instances you need.
+$ rake db:seed
+</pre>
+
+Use @rake db:reseed@ if you want to empty and reseed the database. Or you can use @rake db:drop@ and @rake db:setup@. The equivalent task for Rails with ActiveRecord is @rake db:reset@ which will be available in Mongoid 4.0.
 
 Set the database for running tests:
 
@@ -315,6 +318,24 @@ $ rake db:test:prepare
 </pre>
 
 If you’re not using "rvm":https://rvm.io/, the Ruby Version Manager, you should preface each rake command with @bundle exec@. You don’t need to use @bundle exec@ if you are using rvm version 1.11.0 or newer.
+
+h3. Change your Application's Secret Token
+
+If you've used the Rails Composer tool to generate the application, the application's secret token will be unique, just as with any Rails application generated with the @rails new@ command.
+
+However, if you've cloned the application directly from GitHub, it is crucial that you change the application's secret token before deploying your application in production mode. Otherwise, people could change their session information, and potentially access your site without your permission. Your secret token should be at least 30 characters long and completely random.
+
+Get a unique secret token:
+
+<pre>
+rake secret
+</pre>
+
+Edit your *config/initializers/secret_token.rb* file to add the secret token:
+
+<pre>
+Rails3MongoidOmniauth::Application.config.secret_token = '...some really long, random string...'
+</pre>
 
 h2. Test the App
 
