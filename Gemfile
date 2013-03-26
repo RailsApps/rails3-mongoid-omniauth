@@ -6,6 +6,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 gem 'jquery-rails'
+# Per http://mongoid.org/en/mongoid/docs/installation.html#installation
+# to use mongodb versions before 2.2.0, uncomment this line instead:
+# gem 'mongoid', '~> 3.0.1'
 gem "mongoid", ">= 3.1.1"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 0.9.1", :group => :test
