@@ -77,21 +77,29 @@ h2. Dependencies
 
 Before running this app, you will need:
 
-* The Ruby language (version 1.9.3)
+* The Ruby language (version 1.9.3 or 2.0.0)
 * Rails 3.2
-* A working installation of "MongoDB":http://www.mongodb.org/ (version 1.6.0 or newer)
+* A working installation of "MongoDB":http://www.mongodb.org/ (version 2.0.0 or newer)
 
 See the article "Installing Rails":http://railsapps.github.com/installing-rails.html for advice about updating Rails and your development environment.
 
 h4. Installing MongoDB
 
-If you don't have MongoDB installed on your computer, you'll need to install it and set it up to be always running on your computer (run at launch). On Mac OS X, the easiest way to install MongoDB is to install "Homebrew":http://mxcl.github.com/homebrew/ and then run the following:
+If you don't have MongoDB installed on your computer, you'll need to install it and set it up to be always running on your computer (run at launch).
+
+On Mac OS X, the easiest way to install MongoDB is to install "Homebrew":http://mxcl.github.com/homebrew/ and then run the following:
 
 <pre>
 brew install mongodb
 </pre>
 
 Homebrew will provide post-installation instructions to get MongoDB running. The last line of the installation output shows you the MongoDB install location (for example, */usr/local/Cellar/mongodb/1.8.0-x86_64*). You'll find the MongoDB configuration file there. After an installation using Homebrew, the default data directory will be */usr/local/var/mongodb*.
+
+On the Debian GNU/Linux operating system, as of March 2013, the latest stable version is MongoDB 2.0.0. With MongoDB 2.0.0, the Mongoid gem must be version 3.0.x. See the "Mongoid installation instructions":http://mongoid.org/en/mongoid/docs/installation.html#installation. Change your Gemfile to use an earlier Mongoid version:
+
+<pre>
+gem 'mongoid', '~> 3.0.1'
+</pre>
 
 h2. Getting the Application
 
@@ -406,7 +414,7 @@ h2. MIT License
 
 "MIT License":http://www.opensource.org/licenses/mit-license
 
-Copyright © 2012 Daniel Kehoe
+Copyright © 2012-13 Daniel Kehoe
 
 h2. Useful Links
 
