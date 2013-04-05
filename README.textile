@@ -71,7 +71,7 @@ Visit "http://developers.facebook.com/setup":http://developers.facebook.com/setu
 
 h4. GitHub
 
-Visit "https://github.com/account/applications/new":https://github.com/account/applications/new to register your application.
+Visit "https://github.com/settings/applications/new":https://github.com/settings/applications/new to register your application.
 
 h2. Dependencies
 
