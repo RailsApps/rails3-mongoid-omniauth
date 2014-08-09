@@ -1,11 +1,11 @@
 h1. !http://railsapps.github.io/images/rails-36x36.jpg(Rails Application for Omniauth with Mongoid)!  Rails App for Omniauth with Mongoid
 
-Rails 3.2 example application shows how to use Omniauth with Mongoid.
+For a Rails 4.1 example application with OmniAuth, see the "rails-omniauth":https://github.com/RailsApps/rails-omniauth application, with an "OmniAuth Tutorial":http://railsapps.github.io/rails-omniauth/.
+
+This is a Rails 3.2 example application for Omniauth with Mongoid.
 
 * "OmniAuth":https://github.com/intridea/omniauth manages authentication using a service provider such as Twitter or Facebook.
 * MongoDB is used as a datastore with the "Mongoid":http://mongoid.org/  gem for quick development without schemas or migrations.
-
-Best of all, there's a "detailed tutorial":http://railsapps.github.io/tutorial-rails-mongoid-omniauth.html to show how it's built.
 
 * *Service Providers:* Facebook, Twitter, GitHub, LinkedIn, and "many more":https://github.com/intridea/omniauth.
 * *Gems:* Mongoid and OmniAuth plus optional jQuery, Haml, RSpec and Cucumber.
@@ -15,14 +15,6 @@ You can build this application in only a few minutes using the "Rails Composer":
 h2. !http://twitter-badges.s3.amazonaws.com/t_logo-a.png(Follow on Twitter)!:http://www.twitter.com/rails_apps Follow on Twitter
 
 Follow the project on Twitter: "@rails_apps":http://twitter.com/rails_apps. Please tweet some praise if you like what you've found.
-
-h2. Tutorial
-
-A complete tutorial is available:
-
-h4. "View the Tutorial":http://railsapps.github.io/tutorial-rails-mongoid-omniauth.html
-
-The tutorial documents each step to follow to create the application. Every step is documented concisely, so a complete beginner can create this application without any additional knowledge. However, no explanation is offered for any of the steps, so if you are a beginner, you’re advised to look for an introduction to Rails elsewhere. See a list of recommended resources for "Rails":http://railsapps.github.io/rails.html.
 
 h2. What Is Implemented -- and What Is Not
 
@@ -45,14 +37,6 @@ This example app shows how to request an email address from the user when he or 
 h4. Similar Examples and Tutorials
 
 This is one in a series of Rails example apps and tutorials from the "RailsApps Project":http://railsapps.github.io/. See a list of additional "Rails examples, tutorials, and starter apps":http://railsapps.github.io/rails-examples-tutorials.html.
-
-|_. Author |_. Example App |_. Comments |
-| Ryan Bates | "Simple OmniAuth":http://railscasts.com/episodes/241-simple-omniauth | screencast |
-| Markus Proske | "OmniAuth Pure":https://communityguides.heroku.com/articles/16 | example and tutorial for OmniAuth with multiple providers |
-| Markus Proske | "Devise and OmniAuth":https://communityguides.heroku.com/articles/11 | example and tutorial for OmniAuth and Devise with multiple providers |
-| Daniel Kehoe | "Devise, RSpec, Cucumber":https://github.com/RailsApps/rails3-devise-rspec-cucumber | Detailed tutorial, app template, starter app, using SQLite |
-| Daniel Kehoe | "Devise, Mongoid":https://github.com/RailsApps/rails3-mongoid-devise | Detailed tutorial, app template, starter app, using MongoDB |
-| Fernando Tapia Rico | "Devise, OmniAuth, Mongoid":https://github.com/fertapric/rails3-mongoid-devise-omniauth | With tutorial, using MongoDB |
 
 h2. Obtaining API Keys
 
@@ -381,8 +365,6 @@ Are you getting an error "OpenSSL certificate verify failed" when you try to gen
 
 h2. Documentation and Support
 
-The "tutorial":http://railsapps.github.io/tutorial-rails-mongoid-omniauth.html provides additional documentation.
-
 Ryan Bates offers a "Railscast on Simple OmniAuth":http://railscasts.com/episodes/241-simple-omniauth. You can find documentation for "OmniAuth":https://github.com/intridea/omniauth at "https://github.com/intridea/omniauth":https://github.com/intridea/omniauth. There is an active "OmniAuth mailing list":http://groups.google.com/group/omniauth and you can submit "OmniAuth issues":https://github.com/intridea/omniauth/issues at GitHub.
 
 h4. Issues
@@ -419,17 +401,16 @@ Copyright © 2012-13 Daniel Kehoe
 h2. Useful Links
 
 |_. Getting Started |_. Articles |_. Tutorials |
-| "Learn Rails":http://learn-rails.com/ | "Twitter Bootstrap and Rails":http://railsapps.github.io/twitter-bootstrap-rails.html | "Rails and Bootstrap":http://railsapps.github.io/rails-bootstrap/ |
-| "Ruby and Rails":http://railsapps.github.io/ruby-and-rails.html | "Analytics for Rails":http://railsapps.github.io/rails-google-analytics.html | |
-| "What is Ruby on Rails?":http://railsapps.github.io/what-is-ruby-rails.html | "Heroku and Rails":http://railsapps.github.io/rails-heroku-tutorial.html | "Devise with CanCan and Twitter Bootstrap":https://tutorials.railsapps.org/rails3-bootstrap-devise-cancan |
-| "Rails Tutorial":https://tutorials.railsapps.org/rails-tutorial | "JavaScript and Rails":http://railsapps.github.io/rails-javascript-include-external.html | "Rails Membership Site with Stripe":https://tutorials.railsapps.org/rails-stripe-membership-saas |
-| "Installing Rails":http://railsapps.github.io/installing-rails.html | "Rails Environment Variables":http://railsapps.github.io/rails-environment-variables.html | "Rails Subscription Site with Recurly":https://tutorials.railsapps.org/rails-recurly-subscription-saas |
-| "Updating Rails":http://railsapps.github.io/updating-rails.html | "Git and Rails":http://railsapps.github.io/rails-git.html | "Startup Prelaunch Signup Application":http://railsapps.github.io/tutorial-rails-prelaunch-signup.html |
-| "Rails Composer":http://railsapps.github.io/rails-composer/ | "Email and Rails":http://railsapps.github.io/rails-send-email.html | "Devise with RSpec and Cucumber":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html |
-| "Rails Examples":http://railsapps.github.io/ | "Haml and Rails":http://railsapps.github.io/rails-haml.html | "Devise with Mongoid":http://railsapps.github.io/tutorial-rails-mongoid-devise.html |
-| "Rails Starter Apps":http://railsapps.github.io/rails-examples-tutorials.html | "Rails Application Layout":http://railsapps.github.io/rails-default-application-layout.html | "OmniAuth with Mongoid":http://railsapps.github.io/tutorial-rails-mongoid-omniauth.html |
-| | "HTML5 Boilerplate for Rails":http://railsapps.github.io/rails-html5-boilerplate.html | "Subdomains with Devise":http://railsapps.github.io/tutorial-rails-subdomains.html |
-| | "Example Gemfiles for Rails":http://railsapps.github.io/rails-3-2-example-gemfile.html | |
-| | "Rails Application Templates":http://railsapps.github.io/rails-application-templates.html | |
-
-!https://cruel-carlota.pagodabox.com/a45f291bb655bb6d51e2113bd38a0614(githalytics.com alpha)!
+| "Ruby on Rails":http://railsapps.github.io/ruby-and-rails.html |                                     "Analytics for Rails":http://railsapps.github.io/rails-google-analytics.html |                 "Rails Bootstrap":http://railsapps.github.io/twitter-bootstrap-rails.html |
+| "What is Ruby on Rails?":http://railsapps.github.io/what-is-ruby-rails.html |                        "Heroku and Rails":http://railsapps.github.io/rails-heroku-tutorial.html |                     "Rails Foundation":http://railsapps.github.io/rails-foundation.html |
+| "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html |                              "JavaScript and Rails":http://railsapps.github.io/rails-javascript-include-external.html |     "RSpec Tutorial":http://railsapps.github.io/rspec.html |
+| "Rails Tutorial":https://tutorials.railsapps.org/rails-tutorial |                                    "Rails Environment Variables":http://railsapps.github.io/rails-environment-variables.html |    "Rails Devise Tutorial":http://railsapps.github.io/tutorial-rails-devise.html |
+| "Ruby on Rails Tutorial for Beginners":http://learn-rails.com/ruby-on-rails-tutorial-for-beginners | "Git and GitHub with Rails":http://railsapps.github.io/rails-git.html |                        "Devise RSpec":http://railsapps.github.io/tutorial-rails-devise-rspec-cucumber.html |
+| "Install Ruby on Rails":http://railsapps.github.io/installing-rails.html |                           "Send Email with Rails":http://railsapps.github.io/rails-send-email.html |                     "Devise Bootstrap":http://railsapps.github.io/tutorial-rails-bootstrap-devise-cancan.html |
+| "Install Ruby on Rails - Mac OS X":http://railsapps.github.io/installrubyonrails-mac.html |          "Haml and Rails":http://railsapps.github.io/rails-haml.html |                                  "Rails Membership Site with Stripe":https://tutorials.railsapps.org/rails-stripe-membership-saas |
+| "Install Ruby on Rails - Ubuntu":http://railsapps.github.io/installrubyonrails-ubuntu.html |         "Rails Application Layout":http://railsapps.github.io/rails-default-application-layout.html |  "Rails Subscription Site with Recurly":https://tutorials.railsapps.org/rails-recurly-subscription-saas |
+| "Ruby on Rails - Nitrous.io":http://railsapps.github.io/rubyonrails-nitrous-io.html |                "HTML5 Boilerplate for Rails":http://railsapps.github.io/rails-html5-boilerplate.html |        "Startup Prelaunch Signup Application":https://tutorials.railsapps.org/rails-prelaunch-signup |
+| "Update Rails":http://railsapps.github.io/updating-rails.html |                                      "Example Gemfiles for Rails":http://railsapps.github.io/rails-3-2-example-gemfile.html |
+| "Rails Composer":http://railsapps.github.io/rails-composer/ |                                        "Rails Application Templates":http://railsapps.github.io/rails-application-templates.html |
+| "Rails Examples":http://railsapps.github.io/ |                                                       "Rails Product Planning":http://railsapps.github.io/rails-product-planning.html |
+| "Rails Starter Apps":http://railsapps.github.io/rails-examples-tutorials.html |                      "Rails Project Management":http://railsapps.github.io/rails-project-management.html |
